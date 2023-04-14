@@ -1,0 +1,139 @@
+* {
+  font-family: "Manrope", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-weight: 600;
+  color: rgb(82, 82, 82);
+}
+
+ul {
+  list-style: none;
+}
+
+#app {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+.top-footer {
+  border-bottom: 1px solid rgb(156, 156, 156);
+  padding: 0.5em;
+  display: grid;
+  place-items: center;
+}
+
+.top-footer span {
+  font-weight: 900;
+  color: blueviolet;
+  cursor: pointer;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+}
+
+ul button {
+  padding: 0.6em 1.2em;
+  border: none;
+  background-color: blueviolet;
+  color: white;
+  border-radius: 7px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+ul li {
+  cursor: pointer;
+}
+
+.main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+  padding-top: 7em;
+}
+
+.main h1 {
+  font-size: 4rem;
+  text-align: center;
+  font-weight: 900;
+}
+
+.title--1,
+.title--2 {
+  color: black;
+}
+
+.title--3 {
+  color: blueviolet;
+}
+
+.description {
+  text-align: center;
+  max-width: 34ch;
+  font-weight: 400;
+  color: rgb(94, 94, 94);
+}
+
+.quote {
+  padding: 0.6em 1.2em;
+  border: none;
+  background-color: white;
+  color: blueviolet;
+  border-bottom: 2px solid blueviolet;
+  border-radius: 7px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.experts {
+  color: rgb(65, 126, 176);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  word-spacing: 5px;
+}
+
+.experts-logos {
+  display: flex;
+  justify-content: space-between;
+  gap: 5rem;
+}
+
+.experts-logos img {
+  cursor: pointer;
+}
+
+.blur {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50rem;
+  height: 50rem;
+  border-radius: 50%;
+  background: linear-gradient(
+    170deg,
+    rgba(32, 0, 36, 1) 0%,
+    rgba(76, 9, 121, 1) 35%,
+    rgba(9, 103, 127, 1) 72%,
+    rgba(0, 255, 226, 1) 100%
+  );
+  filter: blur(17rem);
+  z-index: -1;
+}
