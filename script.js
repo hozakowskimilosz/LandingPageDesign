@@ -8,6 +8,6 @@ window.onpointermove = (event) => {
       left: `${clientX}px`,
       top: `${clientY}px`,
     },
-    { duration: 3000, fill: "forwards" }
+    { duration: 7000, fill: "forwards" }
   );
 };

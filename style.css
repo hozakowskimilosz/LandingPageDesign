@@ -16,6 +16,10 @@
   color: var(--f-gray);
 }
 
+body {
+  overflow: hidden;
+}
+
 ul {
   list-style: none;
 }
@@ -176,4 +180,5 @@ ul li {
   background: linear-gradient(to right, rgb(127, 255, 212), rgb(138, 43, 226));
   z-index: -1;
   animation: rotate 20s infinite;
+  overflow: hidden;
 }
