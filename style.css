@@ -85,14 +85,18 @@ ul li {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  gap: 2rem;
-  padding-top: 7em;
+  gap: 1.8rem;
+  padding-top: 10em;
 }
 
 .main h1 {
   font-size: 4rem;
   text-align: center;
   font-weight: 900;
+}
+
+.title {
+  line-height: 4rem;
 }
 
 .title--1,
@@ -137,7 +141,7 @@ ul li {
 .experts-logos {
   display: flex;
   justify-content: space-between;
-  gap: 5rem;
+  gap: 2rem;
 }
 
 .experts-logos img {
