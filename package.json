@@ -7,8 +7,5 @@
     "start": "parcel index.html"
   },
   "author": "Milosz",
-  "license": "ISC",
-  "dependencies": {
-    "parcel": "^2.8.3"
-  }
+  "license": "ISC"
 }
