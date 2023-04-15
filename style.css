@@ -184,7 +184,7 @@ ul li {
   top: 50%;
   left: 50%;
   translate: -50% -50%;
-  height: 50rem;
+  height: 75rem;
   aspect-ratio: 1;
   border-radius: 50%;
   filter: blur(12rem);
