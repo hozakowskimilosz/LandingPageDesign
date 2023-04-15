@@ -66,6 +66,12 @@ ul button {
   border-radius: 7px;
   font-weight: 900;
   cursor: pointer;
+  border: 2px solid transparent;
+  transition: border 200ms;
+}
+
+ul button:hover {
+  border: 2px solid var(--p-white);
 }
 
 ul li {
@@ -110,10 +116,15 @@ ul li {
   border: none;
   background-color: white;
   color: var(--p-bright-purple);
-  border-bottom: 2px solid var(--p-bright-purple);
+  border: 2px solid transparent;
   border-radius: 5px;
   font-weight: 900;
   cursor: pointer;
+  transition: border 200ms;
+}
+
+.quote:hover {
+  border: 2px solid var(--p-bright-purple);
 }
 
 .experts {
