@@ -48,7 +48,7 @@ ul {
 .navbar {
   display: flex;
   justify-content: space-between;
-  padding: 1em;
+  padding: 0.5em 2em;
 }
 
 .navbar ul {
