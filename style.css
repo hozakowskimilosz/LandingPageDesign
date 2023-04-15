@@ -1,12 +1,19 @@
+/* setup ------------------------------------------------ */
+:root {
+  --p-bright-purple: rgb(138, 43, 226);
+  --p-blue: rgb(65, 126, 176);
+  --p-white: rgb(255, 255, 255);
+  --p-black: rgb(0, 0, 0);
+
+  --f-gray: rgb(82, 82, 82);
+  --bb-gray: rgb(156, 156, 156);
+}
+
 * {
   font-family: "Manrope", sans-serif;
   margin: 0;
   padding: 0;
-}
-
-body {
-  font-weight: 600;
-  color: rgb(82, 82, 82);
+  color: var(--f-gray);
 }
 
 ul {
@@ -19,8 +26,9 @@ ul {
   flex-direction: column;
 }
 
+/* footer ----------------------------------------------- */
 .top-footer {
-  border-bottom: 1px solid rgb(156, 156, 156);
+  border-bottom: 1px solid var(--bb-gray);
   padding: 0.5em;
   display: grid;
   place-items: center;
@@ -28,10 +36,11 @@ ul {
 
 .top-footer span {
   font-weight: 900;
-  color: blueviolet;
+  color: var(--p-bright-purple);
   cursor: pointer;
 }
 
+/* navigation ------------------------------------------- */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -48,8 +57,8 @@ ul {
 ul button {
   padding: 0.6em 1.2em;
   border: none;
-  background-color: blueviolet;
-  color: white;
+  background-color: var(--p-bright-purple);
+  color: var(--p-white);
   border-radius: 7px;
   font-weight: 900;
   cursor: pointer;
@@ -59,6 +68,7 @@ ul li {
   cursor: pointer;
 }
 
+/* main section ----------------------------------------- */
 .main {
   flex-grow: 1;
   display: flex;
@@ -77,33 +87,33 @@ ul li {
 
 .title--1,
 .title--2 {
-  color: black;
+  color: var(--p-black);
 }
 
 .title--3 {
-  color: blueviolet;
+  color: var(--p-bright-purple);
 }
 
 .description {
   text-align: center;
   max-width: 34ch;
   font-weight: 400;
-  color: rgb(94, 94, 94);
+  color: var(--f-gray);
 }
 
 .quote {
   padding: 0.6em 1.2em;
   border: none;
   background-color: white;
-  color: blueviolet;
-  border-bottom: 2px solid blueviolet;
-  border-radius: 7px;
+  color: var(--p-bright-purple);
+  border-bottom: 2px solid var(--p-bright-purple);
+  border-radius: 5px;
   font-weight: 900;
   cursor: pointer;
 }
 
 .experts {
-  color: rgb(65, 126, 176);
+  color: var(--p-blue);
   font-size: 0.8rem;
   text-transform: uppercase;
   word-spacing: 5px;
@@ -119,21 +129,51 @@ ul li {
   cursor: pointer;
 }
 
-.blur {
+/* hover underline effect ------------------------------- */
+.hover-underline {
+  position: relative;
+}
+
+.hover-underline::after {
+  content: "";
+  position: absolute;
+  top: 1.2rem;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: var(--p-bright-purple);
+  transition: width 350ms;
+}
+
+.hover-underline:hover::after {
+  width: 100%;
+}
+
+/* rotating blob ---------------------------------------- */
+@keyframes rotate {
+  from {
+    rotate: 0deg;
+  }
+
+  50% {
+    scale: 1 1.5;
+  }
+
+  to {
+    rotate: 360deg;
+  }
+}
+
+.blob {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  width: 50rem;
+  translate: -50% -50%;
   height: 50rem;
+  aspect-ratio: 1;
   border-radius: 50%;
-  background: linear-gradient(
-    170deg,
-    rgba(32, 0, 36, 1) 0%,
-    rgba(76, 9, 121, 1) 35%,
-    rgba(9, 103, 127, 1) 72%,
-    rgba(0, 255, 226, 1) 100%
-  );
-  filter: blur(17rem);
+  filter: blur(12rem);
+  background: linear-gradient(to right, rgb(127, 255, 212), rgb(138, 43, 226));
   z-index: -1;
+  animation: rotate 20s infinite;
 }
